@@ -16,11 +16,11 @@ export default class ButtonComponent extends React.Component {
     var clicked = this.state.clicked;
     if(clicked){
       return (
-        <button disabled="disabled" onClick={this.clickButton}>这是按钮</button>
+        <button className={this.props.state?'btn btn-'+this.props.state:'btn'}  onClick={this.clickButton}>这是按钮</button>
       );
     }else{
       return (
-        <button onClick={this.clickButton}>这是按钮</button>
+        <button className={this.props.state?'btn btn-'+this.props.state:'btn'}  onClick={this.clickButton}>这是按钮</button>
       );
     }
   }

@@ -56,13 +56,13 @@
 
 	var _reactDom = __webpack_require__(35);
 
-	var _ButtonComponent = __webpack_require__(173);
+	var _ButtonComponentList = __webpack_require__(173);
 
-	var _ButtonComponent2 = _interopRequireDefault(_ButtonComponent);
+	var _ButtonComponentList2 = _interopRequireDefault(_ButtonComponentList);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _reactDom.render)(_react2.default.createElement(_ButtonComponent2.default, null), (0, _jquery2.default)('#content')[0]);
+	(0, _reactDom.render)(_react2.default.createElement(_ButtonComponentList2.default, null), (0, _jquery2.default)('#content')[0]);
 
 /***/ },
 /* 1 */
@@ -31673,7 +31673,64 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(174);
+	var _ButtonComponent = __webpack_require__(174);
+
+	var _ButtonComponent2 = _interopRequireDefault(_ButtonComponent);
+
+	__webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ButtonComponentList = function (_React$Component) {
+	  _inherits(ButtonComponentList, _React$Component);
+
+	  function ButtonComponentList() {
+	    _classCallCheck(this, ButtonComponentList);
+
+	    return _possibleConstructorReturn(this, (ButtonComponentList.__proto__ || Object.getPrototypeOf(ButtonComponentList)).apply(this, arguments));
+	  }
+
+	  _createClass(ButtonComponentList, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'buttonComponentList' },
+	        _react2.default.createElement(_ButtonComponent2.default, { state: 'default' }),
+	        _react2.default.createElement(_ButtonComponent2.default, { state: 'primary' }),
+	        _react2.default.createElement(_ButtonComponent2.default, { state: 'success' })
+	      );
+	    }
+	  }]);
+
+	  return ButtonComponentList;
+	}(_react2.default.Component);
+
+	exports.default = ButtonComponentList;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(175);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31710,13 +31767,13 @@
 	      if (clicked) {
 	        return _react2.default.createElement(
 	          'button',
-	          { disabled: 'disabled', onClick: this.clickButton },
+	          { className: this.props.state ? 'btn btn-' + this.props.state : 'btn', onClick: this.clickButton },
 	          '\u8FD9\u662F\u6309\u94AE'
 	        );
 	      } else {
 	        return _react2.default.createElement(
 	          'button',
-	          { onClick: this.clickButton },
+	          { className: this.props.state ? 'btn btn-' + this.props.state : 'btn', onClick: this.clickButton },
 	          '\u8FD9\u662F\u6309\u94AE'
 	        );
 	      }
@@ -31729,16 +31786,16 @@
 	exports.default = ButtonComponent;
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(175);
+	var content = __webpack_require__(176);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(177)(content, {});
+	var update = __webpack_require__(178)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -31755,21 +31812,21 @@
 	}
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(176)();
+	exports = module.exports = __webpack_require__(177)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, "body {\r\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica,  Microsoft Yahei, Arial, WenQuanYi Micro Hei, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\r\n  font-size: 14px;\r\n  line-height: 1.5;\r\n  color: #333;\r\n  background-color: #fff;\r\n}\r\n\r\n.btn {\r\n  position: relative;\r\n  display: inline-block;\r\n  padding: 6px 12px;\r\n  margin-right: 10px;\r\n  font-family: inherit;\r\n  font-size: 14px;\r\n  font-weight: 400;\r\n  line-height: 20px;\r\n  color: #333;\r\n  white-space: nowrap;\r\n  vertical-align: middle;\r\n  cursor: pointer;\r\n  -webkit-user-select: none;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  background-color: #eee;\r\n  background-image: -webkit-linear-gradient(#fcfcfc, #eee);\r\n  background-image: linear-gradient(#fcfcfc, #eee);\r\n  border: 1px solid #d5d5d5;\r\n  border-radius: 3px;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  appearance: none;\r\n}\r\n\r\n.btn:hover, .btn:active {\r\n  text-decoration: none;\r\n  background-color: #ddd;\r\n  background-image: -webkit-linear-gradient(#eee, #ddd);\r\n  background-image: linear-gradient(#eee, #ddd);\r\n  border-color: #ccc;\r\n}\r\n\r\n.btn-sm {\r\n  padding: 3px 10px;\r\n  font-size: 12px;\r\n  line-height: 20px;\r\n}\r\n\r\n.btn-primary {\r\n  color: #fff;\r\n  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);\r\n  background-color: #03A9F4;\r\n  background-image: -webkit-linear-gradient(#03A9F4, #2196F3);\r\n  background-image: linear-gradient(#03A9F4, #2196F3);\r\n  border-color: #2196F3;\r\n}\r\n\r\n.btn-primary:hover, .btn-primary:active, .btn-primary:focus {\r\n    color: #fff;\r\n    background: #2196F3 !important;\r\n    background-image: -webkit-linear-gradient(#03A9F4, #2196F3);\r\n    background-image: linear-gradient(#03A9F4, #2196F3);\r\n    border-color: #2196F3;\r\n}\r\n\r\n.btn-success{\r\n  color: #fff;\r\n  text-shadow: 0 -1px 0 rgba(0,0,0,0.15);\r\n  background-color: #8BC34A;\r\n  background-image: -webkit-linear-gradient(#8BC34A, #4CAF50);\r\n  background-image: linear-gradient(#8BC34A, #4CAF50);\r\n  border-color: #4CAF50;\r\n}\r\n\r\n.btn-success:hover, .btn-success:active, .btn-success:focus {\r\n    color: #fff;\r\n    background: #4CAF50 !important;\r\n    background-image: -webkit-linear-gradient(#8BC34A, #4CAF50);\r\n    background-image: linear-gradient(#8BC34A, #4CAF50);\r\n    border-color: #4CAF50;\r\n}\r\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports) {
 
 	/*
@@ -31825,7 +31882,7 @@
 
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -32074,6 +32131,46 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
+
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(180);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(178)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./ButtonComponentList.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./ButtonComponentList.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(177)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".buttonComponentList{\r\n  margin: 5px auto;\r\n  text-align: center;\r\n  border: 1px solid #eee;\r\n  position: relative;\r\n}\r\n\r\n.buttonComponentList> button{\r\n  margin-bottom: 10px;\r\n  margin-top: 45px;\r\n}\r\n\r\n.buttonComponentList::before{\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 35px;\r\n  line-height: 35px;\r\n  background: #eee;\r\n  margin-bottom: 5px;\r\n  content: \"\\6309\\94AE\\4E00\\89C8\";\r\n  text-align: center;\r\n}\r\n", ""]);
+
+	// exports
 
 
 /***/ }
