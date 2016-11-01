@@ -1,20 +1,23 @@
 var path  = require('path');
+var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'eval',
   entry: path.resolve(__dirname, 'app/demo.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders:[
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        include: path.join(__dirname, 'app')
+        loaders: ['react-hot', 'babel']
       },
       {
         test: /\.(png|jpg|gif)$/,
