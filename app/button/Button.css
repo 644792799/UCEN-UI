@@ -23,22 +23,34 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #eee;
+  *background-color: #eee;
   background-image: -webkit-linear-gradient(#fcfcfc, #eee);
   background-image: linear-gradient(#fcfcfc, #eee);
-  border: 1px solid #d5d5d5;
+  border: 1px solid #eee;
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-.btn:hover, .btn:active {
+.btn[disabled] {
+  cursor: not-allowed;
+  opacity: .65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+.btn:hover, .btn:active, .btn:focus {
   text-decoration: none;
-  background-color: #ddd;
-  background-image: -webkit-linear-gradient(#eee, #ddd);
-  background-image: linear-gradient(#eee, #ddd);
-  border-color: #ccc;
+  background-image: -webkit-linear-gradient(#eee, #eee);
+  background-image: linear-gradient(#eee, #eee);
+  border-color: #eee;
+}
+
+.btn[disabled]:hover, .btn[disabled]:active, .btn[disabled]:focus{
+  background-image: -webkit-linear-gradient(#fcfcfc, #eee);
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border-color: #eee;
 }
 
 .btn-sm {
@@ -57,11 +69,15 @@ body {
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
-    color: #fff;
-    background: #2196F3 !important;
-    background-image: -webkit-linear-gradient(#03A9F4, #2196F3);
-    background-image: linear-gradient(#03A9F4, #2196F3);
+    background-image: -webkit-linear-gradient(#2196F3, #2196F3);
+    background-image: linear-gradient(#2196F3, #2196F3);
     border-color: #2196F3;
+}
+
+.btn-primary[disabled]:hover, .btn-primary[disabled]:active, .btn-primary[disabled]:focus{
+  background-image: -webkit-linear-gradient(#03A9F4, #2196F3);
+  background-image: linear-gradient(#03A9F4, #2196F3);
+  border-color: #2196F3;
 }
 
 .btn-success{
@@ -74,9 +90,13 @@ body {
 }
 
 .btn-success:hover, .btn-success:active, .btn-success:focus {
-    color: #fff;
-    background: #4CAF50 !important;
-    background-image: -webkit-linear-gradient(#8BC34A, #4CAF50);
-    background-image: linear-gradient(#8BC34A, #4CAF50);
+    background-image: -webkit-linear-gradient(#4CAF50, #4CAF50);
+    background-image: linear-gradient(#4CAF50, #4CAF50);
     border-color: #4CAF50;
+}
+
+.btn-success[disabled]:hover, .btn-success[disabled]:active, .btn-success[disabled]:focus{
+  background-image: -webkit-linear-gradient(#8BC34A, #4CAF50);
+  background-image: linear-gradient(#8BC34A, #4CAF50);
+  border-color: #4CAF50;
 }

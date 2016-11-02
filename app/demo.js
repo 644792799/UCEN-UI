@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
 import {render} from 'react-dom';
-import ButtonComponentList from './button/ButtonComponentList.js';
+import ButtonList from './button/ButtonList.js';
 
-render(<ButtonComponentList/>, $('#content')[0]);
+render(<ButtonList/>, $('#content')[0]);
