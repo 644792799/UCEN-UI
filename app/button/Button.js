@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-export default class ButtonComponent extends React.Component {
+export default class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {clicked:false};

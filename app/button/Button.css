@@ -100,3 +100,69 @@ body {
   background-image: linear-gradient(#8BC34A, #4CAF50);
   border-color: #4CAF50;
 }
+
+.btn-waring {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #FFC107;
+    background-image: -webkit-linear-gradient(#FFC107, #FF9800);
+    background-image: linear-gradient(#FFC107, #FF9800);
+    border-color: #FF9800;
+}
+
+.btn-waring:hover, .btn-waring:active, .btn-waring:focus {
+    background-image: -webkit-linear-gradient(#FF9800, #FF9800);
+    background-image: linear-gradient(#FF9800, #FF9800);
+    border-color: #FF9800;
+}
+
+.btn-waring[disabled]:hover, .btn-waring[disabled]:active, .btn-waring[disabled]:focus{
+  background-image: -webkit-linear-gradient(#FFC107, #FF9800);
+  background-image: linear-gradient(#FFC107, #FF9800);
+  border-color: #FF9800;
+}
+
+.btn-info {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #1ed1e8;
+    background-image: -webkit-linear-gradient(#1ed1e8, #02a6bb);
+    background-image: linear-gradient(#1ed1e8, #02a6bb);
+    border-color: #02a6bb;
+}
+
+.btn-info:hover, .btn-info:active, .btn-info:focus {
+    background-image: -webkit-linear-gradient(#02a6bb, #02a6bb);
+    background-image: linear-gradient(#02a6bb, #02a6bb);
+    border-color: #02a6bb;
+}
+
+.btn-info[disabled]:hover, .btn-info[disabled]:active, .btn-info[disabled]:focus{
+  background-image: -webkit-linear-gradient(#1ed1e8, #02a6bb);
+  background-image: linear-gradient(#1ed1e8, #02a6bb);
+  border-color: #02a6bb;
+}
+
+.btn-link{
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  color: #337ab7;
+}
+
+.btn-link:hover, .btn-link:active, .btn-link:focus{
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  color: #23527c;
+  text-decoration: underline;
+}
+
+.btn-link[disabled]:hover, .btn-link[disabled]:active, .btn-link[disabled]:focus{
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  color: #337ab7;
+  text-decoration:none;
+}
